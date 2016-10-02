@@ -59,18 +59,15 @@ tput setaf 2
   if [ "$?" != "1" ]
   then
     case $opt in
-      1) repo init -u git://github.com/CyanogenMod/android.git -b cm-12.0
-      2) repo init -u git://github.com/CyanogenMod/android.git -b cm-12.1
-      3) repo init -u git://github.com/CyanogenMod/android.git -b cm-13.0
-      4) repo init -u git://github.com/CyanogenMod/android.git -b cm-14.0
-      5) repo init -u git://github.com/temasek/android.git -b cm-12.0
-      6) repo init -u git://github.com/temasek/android.git -b cm-12.1
-      7) repo init -u git://github.com/trader418/android.git -b cm-13.0
-      *) echo "Invalid option"; continue;;
+      1) repo init -u git://github.com/CyanogenMod/android.git -b cm-12.0;;
+      2) repo init -u git://github.com/CyanogenMod/android.git -b cm-12.1;;
+      3) repo init -u git://github.com/CyanogenMod/android.git -b cm-13.0;;
+      4) repo init -u git://github.com/CyanogenMod/android.git -b cm-14.0;;
+      5) repo init -u git://github.com/temasek/android.git -b cm-12.0;;
+      6) repo init -u git://github.com/temasek/android.git -b cm-12.1;;
+      7) repo init -u git://github.com/trader418/android.git -b cm-13.0;;
     esac
   fi
-
-done
 ######
 	time repo sync --force-broken --force-sync --no-clone-bundle --quiet
 	echo  
