@@ -34,7 +34,44 @@ tput setaf 2
 	mkdir -p ~/android/system
 	cd ~/android/system
 	echo  
-	repo init -u git://github.com/CyanogenMod/android.git -b cm-13.0
+######
+  echo "============================================================"
+  echo " Elige tu versión de CM"
+  echo "============================================================"
+  echo 
+  echo "  1 - CyanogenMod 12.0"
+  echo "  2 - CyanogenMod 12.1"
+  echo "  3 - CyanogenMod 13.0"
+  echo "  4 - CyanogenMod 14.0"
+  echo 
+  echo "============================================================"
+  echo " Alternativamente, también puedes elegir"
+  echo " 	nuestra versión temasek"
+  echo "============================================================"
+  echo 
+  echo "  5 - CyanogenMod Temasek 12.0"
+  echo "  6 - CyanogenMod Temasek 12.1"
+  echo "  7 - CyanogenMod Temasek 13.0"
+  echo 
+  echo -n "Introduce una opción: "
+  read opt
+  
+  if [ "$?" != "1" ]
+  then
+    case $opt in
+      1) repo init -u git://github.com/CyanogenMod/android.git -b cm-12.0
+      2) repo init -u git://github.com/CyanogenMod/android.git -b cm-12.1
+      3) repo init -u git://github.com/CyanogenMod/android.git -b cm-13.0
+      4) repo init -u git://github.com/CyanogenMod/android.git -b cm-14.0
+      5) repo init -u git://github.com/temasek/android.git -b cm-12.0
+      6) repo init -u git://github.com/temasek/android.git -b cm-12.1
+      7) repo init -u git://github.com/trader418/android.git -b cm-13.0
+      *) echo "Invalid option"; continue;;
+    esac
+  fi
+
+done
+######
 	time repo sync --force-broken --force-sync --no-clone-bundle --quiet
 	echo  
 	echo  
