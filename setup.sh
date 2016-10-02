@@ -19,7 +19,6 @@ bldwht=${txtbld}$(tput setaf 7) # Bold White
 
 clear
 
-echo -e "${bldred}          ___          ___     "
         echo -e "${bldred}                                 "
         echo -e "${bldred}   ----------------------------- "
         echo -e "${bldred}   |   CyanogenMod Installer   | "
