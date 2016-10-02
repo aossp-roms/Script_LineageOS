@@ -25,7 +25,7 @@ clear
         echo -e "${bldred}   |                           | "
         echo -e "${bldred}   |  Installing dependencies  | "
         echo -e "${bldred}   |                           | "
-        echo -e "${bldred}   |  Setting up your computer!| "
+        echo -e "${bldred}   |    Configurando tu PC     | "
         echo -e "${bldcya}   ----------------------------  "
 
 tput setaf 3
@@ -62,3 +62,21 @@ tput setaf 2
 	sudo cp -v ./ccache /usr/bin/ccache
 	echo "export USE_CCACHE=1" >> ${HOME}/.bashrc
 	echo  
+tput setaf 3
+	echo Descargando repo, si esta instalado se actualizara...
+tput setaf 2
+	cd ..
+	echo  
+	sleep 2
+	mkdir -p ~/bin
+	PATH=~/bin:$PATH
+	curl curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+	chmod a+x ~/bin/repo
+clear
+tput setaf 3
+	echo  
+	echo -e "${bldcya}Tu PC esta listo para compilar :) "
+	echo  
+	sleep 5
+tput setaf 2
+clear
