@@ -20,9 +20,11 @@ bldwht=${txtbld}$(tput setaf 7) # Bold White
 clear
 
 echo -e "${bldred}          ___          ___     "
-        echo -e "${bldred}                               "
-        echo -e "${bldred}       CyanogenMod Installer   "
-        echo -e "${bldred}                               "
-        echo -e "${bldred}     Installing dependencies   "
-        echo -e "${bldred}                               "
-        echo -e "${bldcya}     Setting up your computer! "
+        echo -e "${bldred}                                 "
+        echo -e "${bldred}   ----------------------------- "
+        echo -e "${bldred}   |   CyanogenMod Installer   | "
+        echo -e "${bldred}   |                           | "
+        echo -e "${bldred}   |  Installing dependencies  | "
+        echo -e "${bldred}   |                           | "
+        echo -e "${bldred}   |  Setting up your computer!| "
+        echo -e "${bldcya}   ----------------------------  "
