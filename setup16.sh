@@ -70,7 +70,7 @@ tput setaf 2
 	sleep 2
 	mkdir -p ~/bin
 	PATH=~/bin:$PATH
-	curl curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+	curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 	chmod a+x ~/bin/repo
 clear
 tput setaf 3
