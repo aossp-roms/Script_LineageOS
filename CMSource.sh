@@ -59,7 +59,7 @@ tput setaf 2
   echo "============================================================"
   echo
   echo "  8 - CyanogenMod ferhung-mtk 13.0"
-  echo "  8 - CyanogenMod ferhung-mtk 14.0"
+  echo "  9 - CyanogenMod ferhung-mtk 14.0"
   echo
   echo -n "Introduce una opción: "
   read opt
@@ -75,7 +75,7 @@ tput setaf 2
       6) repo init -u git://github.com/temasek/android.git -b cm-12.1;;
       7) repo init -u git://github.com/trader418/android.git -b cm-13.0;;
       8) repo init -u git://github.com/ferhung-mtk/android.git -b cm-13.0;;
-      8) repo init -u git://github.com/ferhung-mtk/android.git -b cm-14.0;;
+      9) repo init -u git://github.com/ferhung-mtk/android.git -b cm-14.0;;
     esac
   fi
 ######
