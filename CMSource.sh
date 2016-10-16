@@ -21,13 +21,12 @@ clear
 
         echo -e "${bldred}                                 "
         echo -e "${bldred}   ----------------------------- "
-        echo -e "${bldred}   |   CyanogenMod Installer   | "
+        echo -e "${bldred}   |    Auto-instalador CM     | "
         echo -e "${bldred}   |                           | "
-        echo -e "${bldred}   |  Downloading code source  | "
+        echo -e "${bldred}   | Descargando código fuente | "
         echo -e "${bldred}   |                           | "
-        echo -e "${bldred}   |    Configurando tu PC     | "
+        echo -e "${bldred}   |   Configurando tu equipo  | "
         echo -e "${bldcya}   ----------------------------  "
-
 
 
 tput setaf 2
@@ -45,8 +44,8 @@ tput setaf 2
   echo "  4 - CyanogenMod 14.0"
   echo 
   echo "============================================================"
-  echo " Alternativamente, también puedes elegir"
-  echo " 	nuestra versión temasek"
+  echo " Tambien puedes elegir"
+  echo " nuestra versión temasek"
   echo "============================================================"
   echo 
   echo "  5 - CyanogenMod Temasek 12.0"
@@ -54,8 +53,8 @@ tput setaf 2
   echo "  7 - CyanogenMod Temasek 13.0"
   echo 
   echo "============================================================"
-  echo " Alternativamente, también puedes elegir"
-  echo " 	nuestra versión ferhung-mtk"
+  echo " Alternativamente, puedes elegir"
+  echo " nuestra versión ferhung-mtk"
   echo "============================================================"
   echo
   echo "  8 - CyanogenMod ferhung-mtk 13.0"
@@ -84,6 +83,13 @@ tput setaf 2
 	echo  
 	echo -e "${bldcya}El source de CM fue descargado en ~/android/system"
 	echo -e "${bldcya}Tu puedes compilar CM en la ubicación ~/android/system"
-	echo -e "${bldcya}Recuerda hacer ccache -M 40 para poner 40gb de cache, antes de empezar tu primera build :)" 
+	echo -e "${bldcya}Recuerda hacer ${bldgrn}ccache -M 40 ${bldcya}para poner 40gb de cache, antes de empezar tu primera build :)" 
 	cd ~/android/system
+	echo -e "${bldred}                                                      "
+        echo -e "${bldred}   -------------------------------------------------- "
+        echo -e "${bldred}   |  No te olvides de descargar el código fuente   | "
+        echo -e "${bldred}   |                                                | "
+        echo -e "${bldred}   |     para tu dispositivo antes de compilar.     | "
+        echo -e "${bldred}   |                                                | "
+        echo -e "${bldcya}   -------------------------------------------------- "
 exit
