@@ -21,11 +21,11 @@ clear
 
         echo -e "${bldred}                                 "
         echo -e "${bldred}   ----------------------------- "
-        echo -e "${bldred}   |   CyanogenMod Installer   | "
+        echo -e "${bldred}   |    Auto-instalador CM     | "
         echo -e "${bldred}   |                           | "
-        echo -e "${bldred}   |  Installing dependencies  | "
+        echo -e "${bldred}   | Descargando código fuente | "
         echo -e "${bldred}   |                           | "
-        echo -e "${bldred}   |    Configurando tu PC     | "
+        echo -e "${bldred}   |   Configurando tu equipo  | "
         echo -e "${bldcya}   ----------------------------  "
 
 tput setaf 3
