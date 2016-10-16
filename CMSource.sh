@@ -85,7 +85,6 @@ tput setaf 2
 	echo -e "${bldcya}Tu puedes compilar CM en la ubicación ~/android/system"
 	echo -e "${bldcya}Recuerda hacer ${bldgrn}ccache -M 40 ${bldcya}para poner 40gb de cache, antes de empezar tu primera build :)" 
 	cd ~/android/system
-	echo -e "${bldred}                                                      "
         echo -e "${bldred}   -------------------------------------------------- "
         echo -e "${bldred}   |  No te olvides de descargar el código fuente   | "
         echo -e "${bldred}   |                                                | "
