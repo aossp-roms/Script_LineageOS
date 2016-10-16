@@ -80,3 +80,4 @@ tput setaf 3
 	sleep 5
 tput setaf 2
 clear
+	sh CMSource.sh
