@@ -3,7 +3,7 @@
 <img src="http://s15.postimg.org/zcal9kssr/cyanogenmod_logo.jpg" alt="CM Script" />
 </p>
 
-    $ apt-get install git (Ubuntu 15.10 and newer are not necesary)
+    $ apt-get install git (On Ubuntu 15.10 and newer is not necesary)
     $ git clone https://github.com/lolipero/Script_CM -b master
     $ cd Script-CM
     $ chmod a+x setup.sh
