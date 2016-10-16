@@ -75,9 +75,8 @@ tput setaf 2
 clear
 tput setaf 3
 	echo  
-	echo -e "${bldcya}Tu PC esta listo para compilar :) "
+	echo -e "${bldcya}Para continuar la instalación ejecuta ${bldred}CMSource.sh "
 	echo  
 	sleep 5
 tput setaf 2
 clear
-	sh CMSource.sh
