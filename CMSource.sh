@@ -31,7 +31,7 @@ clear
 tput setaf 2
 	mkdir -p ~/android/system
 	cd ~/android/system
-	echo  
+
   # CM version selection
   echo "============================================================"
   echo " Elige tu versión de CM"
@@ -61,7 +61,7 @@ tput setaf 2
   echo
   echo -n "Introduce una opción: "
   read opt
-  
+
   if [ "$?" != "1" ]
   then
     case $opt in
@@ -76,6 +76,7 @@ tput setaf 2
       9) repo init -u git://github.com/ferhung-mtk/android.git -b cm-14.0;;
     esac
   fi
+
   # Initial git config
 	echo "Introduce tu correo electrónico de Github: "
 	read input_email
@@ -83,13 +84,17 @@ tput setaf 2
 	read input_user
 	git config --global user.email "$input_email"
 	git config --global user.name "$input_user"
+
   # First sync
 	time repo sync --force-broken --force-sync -j4
 	echo  
 	echo -e "${bldcya}El source de CM fue descargado en ~/android/system"
 	echo -e "${bldcya}Puedes compilar CM en la ubicación ~/android/system"
 	echo -e "${bldcya}Recuerda hacer ${bldgrn}ccache -M 40 ${bldcya}para poner 40gb de cache, antes de empezar tu primera build :)" 
-	cd ~/android/system
+	mkdir ~/android/system/.repo/local_manifests
+	echo "<?xml version="1.0" encoding="UTF-8"?>" >> ~/android/system/.repo/local_manifests/roomservice.xml
+	echo "<manifest>" >> ~/android/system/.repo/local_manifests/roomservice.xml
+	echo "</manifest>" >> ~/android/system/.repo/local_manifests/roomservice.xml
         echo -e "${bldred}   -------------------------------------------------- "
         echo -e "${bldred}   |  No te olvides de descargar el código fuente   | "
         echo -e "${bldred}   |                                                | "
