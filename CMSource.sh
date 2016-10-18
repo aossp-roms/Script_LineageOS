@@ -21,19 +21,18 @@ clear
 
         echo -e "${bldred}                                 "
         echo -e "${bldred}   ----------------------------- "
-        echo -e "${bldred}   |    Auto-instalador CM     | "
+        echo -e "${bldred}   |    ${bldnormal}Auto-instalador CM     {bldred}| "
         echo -e "${bldred}   |                           | "
-        echo -e "${bldred}   | Descargando código fuente | "
+        echo -e "${bldred}   | ${bldnormal}Descargando código fuente {bldred}| "
         echo -e "${bldred}   |                           | "
-        echo -e "${bldred}   |   Configurando tu equipo  | "
-        echo -e "${bldcya}   ----------------------------  "
-
+        echo -e "${bldred}   |   ${bldnormal}Configurando tu equipo  {bldred}| "
+        echo -e "${bldred}   ----------------------------  "
 
 tput setaf 2
 	mkdir -p ~/android/system
 	cd ~/android/system
 	echo  
-######
+  # CM version selection
   echo "============================================================"
   echo " Elige tu versión de CM"
   echo "============================================================"
@@ -77,12 +76,18 @@ tput setaf 2
       9) repo init -u git://github.com/ferhung-mtk/android.git -b cm-14.0;;
     esac
   fi
-######
-	time repo sync --force-broken --force-sync --no-clone-bundle --quiet
-	echo  
+  # Initial git config
+	echo "Introduce tu correo electrónico de Github: "
+	read input_email
+	echo "Introduce un usuario para tus commits en Github: "
+	read input_user
+	git config --global user.email "$input_email"
+	git config --global user.name "$input_user"
+  # First sync
+	time repo sync --force-broken --force-sync -j4
 	echo  
 	echo -e "${bldcya}El source de CM fue descargado en ~/android/system"
-	echo -e "${bldcya}Tu puedes compilar CM en la ubicación ~/android/system"
+	echo -e "${bldcya}Puedes compilar CM en la ubicación ~/android/system"
 	echo -e "${bldcya}Recuerda hacer ${bldgrn}ccache -M 40 ${bldcya}para poner 40gb de cache, antes de empezar tu primera build :)" 
 	cd ~/android/system
         echo -e "${bldred}   -------------------------------------------------- "
@@ -90,5 +95,5 @@ tput setaf 2
         echo -e "${bldred}   |                                                | "
         echo -e "${bldred}   |     para tu dispositivo antes de compilar.     | "
         echo -e "${bldred}   |                                                | "
-        echo -e "${bldcya}   -------------------------------------------------- "
+        echo -e "${bldred}   -------------------------------------------------- "
 exit
