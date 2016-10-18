@@ -21,12 +21,12 @@ clear
 
         echo -e "${bldred}                                 "
         echo -e "${bldred}   ----------------------------- "
-        echo -e "${bldred}   |    Auto-instalador CM     | "
+        echo -e "${bldred}   |    ${bldnormal}Auto-instalador CM     {bldred}| "
         echo -e "${bldred}   |                           | "
-        echo -e "${bldred}   | Descargando código fuente | "
+        echo -e "${bldred}   | ${bldnormal}Descargando código fuente {bldred}| "
         echo -e "${bldred}   |                           | "
-        echo -e "${bldred}   |   Configurando tu equipo  | "
-        echo -e "${bldcya}   ----------------------------  "
+        echo -e "${bldred}   |   ${bldnormal}Configurando tu equipo  {bldred}| "
+        echo -e "${bldred}   ----------------------------  "
 
 tput setaf 3
 	sleep 1
@@ -79,4 +79,3 @@ tput setaf 3
 	echo  
 	sleep 5
 tput setaf 2
-clear
