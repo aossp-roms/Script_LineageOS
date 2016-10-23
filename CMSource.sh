@@ -31,6 +31,16 @@ clear
 tput setaf 2
 	mkdir -p ~/android/system
 	cd ~/android/system
+	
+  # Initial git config
+	echo "Introduce tu correo electrónico de Github: "
+	read input_email
+	echo "Introduce un usuario para tus commits en Github: "
+	read input_user
+	git config --global user.email "$input_email"
+	git config --global user.name "$input_user"
+	
+clear
 
   # CM version selection
   echo "============================================================"
@@ -76,14 +86,6 @@ tput setaf 2
       9) repo init -u git://github.com/ferhung-mtk/android.git -b cm-14.0;;
     esac
   fi
-
-  # Initial git config
-	echo "Introduce tu correo electrónico de Github: "
-	read input_email
-	echo "Introduce un usuario para tus commits en Github: "
-	read input_user
-	git config --global user.email "$input_email"
-	git config --global user.name "$input_user"
 
   # First sync
 	time repo sync --force-broken --force-sync -j4
