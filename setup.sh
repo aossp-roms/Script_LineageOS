@@ -21,11 +21,11 @@ clear
 
         echo -e "${bldred}                                 "
         echo -e "${bldred}   ----------------------------- "
-        echo -e "${bldred}   |    ${bldnormal}Auto-instalador CM     {bldred}| "
+        echo -e "${bldred}   |    ${bldnormal}Auto-instalador CM     ${bldred}| "
         echo -e "${bldred}   |                           | "
-        echo -e "${bldred}   | ${bldnormal}Descargando código fuente {bldred}| "
+        echo -e "${bldred}   | ${bldnormal}Descargando código fuente ${bldred}| "
         echo -e "${bldred}   |                           | "
-        echo -e "${bldred}   |   ${bldnormal}Configurando tu equipo  {bldred}| "
+        echo -e "${bldred}   |   ${bldnormal}Configurando tu equipo  ${bldred}| "
         echo -e "${bldred}   ----------------------------  "
 
 tput setaf 3
