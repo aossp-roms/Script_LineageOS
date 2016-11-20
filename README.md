@@ -6,7 +6,7 @@
     $ apt-get install git (On Ubuntu 15.10 and newer is not necesary)
     $ git clone https://github.com/lolipero/Script_CM -b master
     $ cd Script_CM
-    $ chmod a+x setup.sh
+    $ chmod a+x setup.sh CMSource.sh
     $ ./setup.sh
 
 <p align="center">
