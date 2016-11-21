@@ -1,18 +1,23 @@
 #!/bin/bash
 # Specify colors utilized in the terminal
-normal='tput sgr0'              # White
+normal='tput sgr0'              # Normal
+txtund=$(tput sgr 0 1)          # Underline
+txtbld=$(tput bold)             # Bold
 red='tput setaf 1'              # Red
 green='tput setaf 2'            # Green
 yellow='tput setaf 3'           # Yellow
+orange='tput setaf 166'         # Orange
 blue='tput setaf 4'             # Blue
 violet='tput setaf 5'           # Violet
 cyan='tput setaf 6'             # Cyan
 white='tput setaf 7'            # White
 txtbld=$(tput bold)             # Bold
 bldred=${txtbld}$(tput setaf 1) # Bold Red
+bldnormal=${txtbld}$(tput sgr0) # Bold normal
 bldgrn=${txtbld}$(tput setaf 2) # Bold Green
 bldblu=${txtbld}$(tput setaf 4) # Bold Blue
 bldylw=$(txtbld)$(tput setaf 3) # Bold Yellow
+bldorange=$(txtbld)$(tput setaf 166) # Bold Orange
 bldvlt=${txtbld}$(tput setaf 5) # Bold Violet
 bldcya=${txtbld}$(tput setaf 6) # Bold Cyan
 bldwht=${txtbld}$(tput setaf 7) # Bold White
@@ -29,7 +34,20 @@ clear
         echo -e "${bldred}   ----------------------------  "
 
 tput setaf 2
-	mkdir -p ~/android/system
+	if [ -d ~/android/system/ ]
+	then
+		read -r -p "${bldred}Directory ~/android/system/ already exists! Do you want to delete it? [Y/n]" response
+		case $response in
+        	[yY][eE][sS]|[yY]) 
+        	sudo rm ~/android/system/ -R
+        	;;
+    		*)
+		echo "Installer is being closed..."
+        	exit
+        	;;
+		esac
+	fi
+	mkdir -p ~/android/system/
 	cd ~/android/system
 	
   # Initial git config
@@ -73,12 +91,12 @@ clear
 	echo -e "${bldcya}The CM source was downloaded in ~/android/system"
 	echo -e "${bldcya}You can compile CM in the location ~/android/system"
 	echo -e "${bldcya}Remember to do ${bldgrn}ccache -M 40 ${bldcya}to put 40gb cache, before starting your first build :)" 
-	cp /root/android/system/.repo/repo /usr/bin/repo 2>/dev/null
+	cp ~/android/system/.repo/repo /usr/bin/repo 2>/dev/null
 	mkdir ~/android/system/.repo/local_manifests 2>/dev/null
-        echo -e "${bldred}   -------------------------------------------------- "
-        echo -e "${bldred}   |   Do not forget to download the source code    | "
-        echo -e "${bldred}   |                                                | "
-        echo -e "${bldred}   |       for your device before compiling.        | "
-        echo -e "${bldred}   |                                                | "
-        echo -e "${bldred}   -------------------------------------------------- "
+        echo -e "${bldorange}   -------------------------------------------------- "
+        echo -e "${bldorange}   |   ${txtund}Do not forget to download the source code    | "
+        echo -e "${bldorange}   |                                                | "
+        echo -e "${bldorange}   |       ${txtund}for your device before compiling.        | "
+        echo -e "${bldorange}   |                                                | "
+        echo -e "${bldorange}   -------------------------------------------------- "
 exit
