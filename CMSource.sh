@@ -73,10 +73,8 @@ clear
 	echo -e "${bldcya}The CM source was downloaded in ~/android/system"
 	echo -e "${bldcya}You can compile CM in the location ~/android/system"
 	echo -e "${bldcya}Remember to do ${bldgrn}ccache -M 40 ${bldcya}to put 40gb cache, before starting your first build :)" 
-	mkdir ~/android/system/.repo/local_manifests
-	echo "<?xml version="1.0" encoding="UTF-8"?>" >> ~/android/system/.repo/local_manifests/roomservice.xml
-	echo "<manifest>" >> ~/android/system/.repo/local_manifests/roomservice.xml
-	echo "</manifest>" >> ~/android/system/.repo/local_manifests/roomservice.xml
+	cp /root/android/system/.repo/repo /usr/bin/repo 2>/dev/null
+	mkdir ~/android/system/.repo/local_manifests 2>/dev/null
         echo -e "${bldred}   -------------------------------------------------- "
         echo -e "${bldred}   |   Do not forget to download the source code    | "
         echo -e "${bldred}   |                                                | "
