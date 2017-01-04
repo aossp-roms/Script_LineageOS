@@ -77,11 +77,11 @@ clear
   if [ "$?" != "1" ]
   then
     case $opt in
-      1) repo init -u git://github.com/CyanogenMod/android.git -b cm-12.0;;
-      2) repo init -u git://github.com/CyanogenMod/android.git -b cm-12.1;;
-      3) repo init -u git://github.com/CyanogenMod/android.git -b cm-13.0;;
-      4) repo init -u git://github.com/CyanogenMod/android.git -b cm-14.0;;
-      5) repo init -u git://github.com/CyanogenMod/android.git -b cm-14.1;;
+      1) repo init -u git://github.com/lineageos/android.git -b cm-12.0;;
+      2) repo init -u git://github.com/lineageos/android.git -b cm-12.1;;
+      3) repo init -u git://github.com/lineageos/android.git -b cm-13.0;;
+      4) repo init -u git://github.com/lineageos/android.git -b cm-14.0;;
+      5) repo init -u git://github.com/lineageos/android.git -b cm-14.1;;
     esac
   fi
 
