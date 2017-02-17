@@ -1,12 +1,12 @@
-<h1> Script for download CM </h1>
+<h1> Script for download LineageOS </h1>
 <p align="center">
-<img src="http://s15.postimg.org/zcal9kssr/cyanogenmod_logo.jpg" alt="CM Script" />
+<img src="http://lineageos.org/images/logo-2.png" alt="LineageOS Script" />
 </p>
 
     $ apt-get install git (On Ubuntu 15.10 and newer is not necesary)
-    $ git clone https://github.com/LoliTeam/Script_CM -b master
-    $ cd Script_CM
-    $ chmod a+x setup.sh CMSource.sh
+    $ git clone https://github.com/LoliTeam/Script_LineageOS -b master
+    $ cd Script_LineageOS
+    $ chmod a+x setup.sh LineageSource.sh
     $ ./setup.sh
 
 <p align="center">

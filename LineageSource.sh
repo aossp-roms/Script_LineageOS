@@ -26,7 +26,7 @@ clear
 
         echo -e "${bldred}                                 "
         echo -e "${bldred}   ----------------------------- "
-        echo -e "${bldred}   |    ${bldnormal}Auto-installation CM     ${bldred}| "
+        echo -e "${bldred}   |    ${bldnormal}Auto-installation of LineageOS     ${bldred}| "
         echo -e "${bldred}   |                           | "
         echo -e "${bldred}   | ${bldnormal}Downloading source code ${bldred}| "
         echo -e "${bldred}   |                           | "
@@ -69,7 +69,7 @@ clear
   echo "  2 - CyanogenMod 12.1"
   echo "  3 - CyanogenMod 13.0"
   echo "  4 - CyanogenMod 14.0"
-  echo "  5 - CyanogenMod 14.1"
+  echo "  5 - LineageOS 14.1"
   echo
   echo -n "Enter an option: "
   read opt
@@ -88,8 +88,8 @@ clear
   # First sync
 	time repo sync --force-broken --force-sync -j4
 	echo  
-	echo -e "${bldcya}The CM source was downloaded in ~/android/system"
-	echo -e "${bldcya}You can compile CM in the location ~/android/system"
+	echo -e "${bldcya}LineageOS source was downloaded in ~/android/system"
+	echo -e "${bldcya}You can compile Lineage in the location ~/android/system"
 	echo -e "${bldcya}Remember to do ${bldgrn}ccache -M 40 ${bldcya}to put 40gb cache, before starting your first build :)" 
 	cp ~/android/system/.repo/repo /usr/bin/repo 2>/dev/null
 	mkdir ~/android/system/.repo/local_manifests 2>/dev/null

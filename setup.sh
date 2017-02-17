@@ -21,7 +21,7 @@ clear
 
         echo -e "${bldred}                                 "
         echo -e "${bldred}   ----------------------------- "
-        echo -e "${bldred}   |    ${bldnormal}Auto-installation CM     ${bldred}| "
+        echo -e "${bldred}   |    ${bldnormal}Auto-installation of LineageOS     ${bldred}| "
         echo -e "${bldred}   |                           | "
         echo -e "${bldred}   | ${bldnormal}Downloading source code ${bldred}| "
         echo -e "${bldred}   |                           | "
@@ -75,7 +75,7 @@ tput setaf 2
 clear
 tput setaf 3
 	echo  
-	echo -e "${bldcya}To continue the installation, run ${bldred}CMSource.sh "
+	echo -e "${bldcya}To continue the installation, run ${bldred}LineageSource.sh "
 	echo  
 	sleep 5
 tput setaf 2
