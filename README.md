@@ -4,7 +4,7 @@
 </p>
 
     $ apt-get install git (On Ubuntu 15.10 and newer is not necesary)
-    $ git clone https://github.com/LoliTeam/Script_LineageOS -b master
+    $ git clone https://github.com/aossp-roms/Script_LineageOS -b master
     $ cd Script_LineageOS
     $ chmod a+x setup.sh LineageSource.sh
     $ ./setup.sh
